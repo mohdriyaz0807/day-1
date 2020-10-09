@@ -1,0 +1,58 @@
+1.	Difference between http 1.1 vs 2.0
+
+HTTP 1.1 :
+o	single connection from one TCP for multiple requests
+o	Websites loading speed is lesser compared to 2.0
+o	Text based protocol it is readable form
+
+HTTP 2.0 : 
+o	supports multiplex connection over single TCP asynchronously.
+o	website load faster without any optimization because of additional round trip time (RTT)
+o	protocols are in binary form it is 0s and 1s , Needs to be converted back from binary in order to read it.
+	
+2.	History of HTTP versions
+
+•	HTTP/0.9- 1991 – one line protocol used for plain html file.
+•	HTTPS – 1994 – SSL connection created by netscape 
+•	HTTP/1.0 – 1996 – concept of headers,version information were introduced.
+•	HTTP/1.1 – 1997 – includes persistent connection,pipelines,caches etc.,
+•	HTTP/2 -2015 – allows multiplexing and server pushing 
+•	HTTP/3 – 2019 – Uses UDP instead of TCP.
+
+
+3.	Difference between Browser JS(console) and NodeJS
+
+NodeJS
+
+•	Node Is headless
+•	Node does server side works
+•	Node process request object
+•	Node doesn’t have “document” object
+•	Node doesn’t have window but has global object
+
+
+Browser JS
+
+•	It is not headless
+•	Browser works on client side
+•	Browser process response object
+•	Browser has document object known as HTML
+•	It has window to display and may have object named global which nevertheless window.
+
+4.	Abstract working of JS engine v8:
+
+•	JS engine uses v8 because it uses JIT (Just In Compiler) instead of interpreter.
+•	In V8 the source code sent to parser for converting it into AST(Abstract Syntax Tree).
+•	Next, the ignition converts AST to bytecode and it sends type feedback to Turbofan ,so it make assumption for process.
+•	Ex:- Hot Code (like loops)
+•	Then Turbofan generates the optimized version of that code.
+
+
+5.	What happens when typing url in the address bar of browser:
+
+•	First the browser check cache for a DNS record, if it is not found the ISP’s DNS server initiate the query.
+•	Then it find a matching IP address for a queried site and send it to browser.
+•	Then browser initiate TCP /UDP connection with server.
+•	After connection established browser sends a HTTP request to the server
+•	The server handles the request and send the response.
+•	Then browser displays the HTML content and if check for additional files like CSS, JS, img to display it. And browser save the static files in cache, so it could retrieve it later.
